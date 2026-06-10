@@ -1,0 +1,50 @@
+WarrantyBoxx
+Copyright (C) 2026 WarrantyBoxx contributors
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License v3.0 as published by the Free
+Software Foundation. See the LICENSE file for the full text.
+
+================================================================================
+Third-party dependencies and their licences
+================================================================================
+
+All runtime dependencies are open source (MIT, Apache-2.0, or BSD). No
+proprietary SDKs, Google Mobile Services, Firebase, analytics or crash-reporting
+libraries are used (Blueprint Section 6.2 / 6.4).
+
+Runtime dependencies
+--------------------------------------------------------------------------------
+flutter_riverpod          MIT         State management and dependency injection
+riverpod_annotation       MIT         Riverpod annotations
+drift                     MIT         Type-safe SQLite ORM
+drift_flutter             MIT         Flutter integration for Drift
+sqlite3_flutter_libs      MIT         Bundled SQLite native libraries
+go_router                 BSD-3-Clause Declarative navigation / deep links
+flutter_local_notifications BSD-2-Clause Local notifications (no FCM)
+workmanager               MIT         Android WorkManager background scheduling
+image_picker              Apache-2.0  Camera and gallery photo selection
+flutter_image_compress    MIT         JPEG compression before storage
+pdf                       Apache-2.0  PDF generation for export
+csv                       MIT         CSV export serialisation
+share_plus                BSD-3-Clause System share sheet
+home_widget               MIT         Android home screen widget
+uuid                      MIT         UUID v4 generation
+path_provider             BSD-3-Clause App documents directory access
+path                      BSD-3-Clause Path manipulation
+intl                      BSD-3-Clause Date / number / currency formatting
+shared_preferences        BSD-3-Clause Local key-value store
+collection                BSD-3-Clause Dart collection utilities
+cupertino_icons           MIT         Icon assets
+
+Dev dependencies
+--------------------------------------------------------------------------------
+build_runner              BSD-3-Clause Code generation runner
+drift_dev                 MIT         Drift code generation
+riverpod_generator        MIT         Riverpod code generation
+riverpod_lint             MIT         Riverpod lints
+mocktail                  MIT         Mock objects for tests
+flutter_lints             BSD-3-Clause Recommended lint set
+
+Full licence texts for each package are available in its pub.dev listing and in
+the package's LICENSE file under the Flutter pub cache.

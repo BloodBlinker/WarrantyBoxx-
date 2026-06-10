@@ -1,0 +1,10 @@
+1.0.0 — First release.
+
+- Add, edit and delete warranty items with photos.
+- Dashboard with warranty health ring and status colour coding.
+- Local expiry reminders via WorkManager (no Google services).
+- Search, filter and sort your items.
+- CSV and PDF export via the system share sheet.
+- Item templates, claim assistant, lifetime asset tracker.
+- Home screen widget and claimed-items archive.
+- Fully offline. No accounts, no tracking, no network calls.

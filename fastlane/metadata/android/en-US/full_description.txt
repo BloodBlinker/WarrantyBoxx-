@@ -1,0 +1,55 @@
+WarrantyBoxx is the only dedicated, fully offline, open-source warranty
+tracker on F-Droid. It turns the moment of purchase into a 60-second entry that
+guarantees you will never miss a warranty claim again.
+
+Consumers lose money every year by failing to claim repairs and replacements on
+products still under warranty. The problem is not awareness — it is friction:
+receipts get lost, expiry dates are forgotten, and there is no single place to
+track what is covered and for how long. WarrantyBoxx fixes that, without
+asking you to create an account or share any data.
+
+== Privacy by design ==
+
+* No accounts, no cloud, no sync — everything stays on your device.
+* Zero network calls. The app simply does not talk to the internet.
+* No analytics, no crash-reporting SDKs, no third-party trackers.
+* No Google Mobile Services or Firebase.
+
+== Features ==
+
+* Add items in seconds: name, purchase date and warranty duration are all you
+  need. Expiry is calculated automatically.
+* Optional details: brand, category, retailer, price, serial and model numbers,
+  notes, and up to five photos of receipts or products.
+* Dashboard: a warranty health ring, tappable summary chips, and your items
+  sorted by expiry date with clear green/amber/red/grey status colours.
+* Local reminders: get notified 30, 15, 7 and 1 day before a warranty expires
+  (fully customisable per item). Reminders work entirely offline via Android's
+  WorkManager — no Google services required.
+* Search, filter and sort by name, brand, retailer, serial number, category,
+  status, price or date.
+* Claim Assistant: when a warranty is about to expire, a guided checklist helps
+  you gather receipts, serial numbers and manufacturer contacts so your claim
+  succeeds.
+* Lifetime asset tracker: see the total value of everything you have under
+  active warranty.
+* Item templates for common products (laptop, TV, washing machine, and more)
+  pre-fill typical warranty periods.
+* Export your whole vault to CSV or a formatted PDF, or share a single item as
+  plain text for a claim email — all through the standard Android share sheet.
+* Home screen widget showing what is expiring soon.
+* Archive of claimed items, with the resolution recorded — a tangible record of
+  the money you have reclaimed.
+
+== Accessibility ==
+
+Status is always shown with both colour and an icon or text. Photos support
+alt text, touch targets meet accessibility minimums, and the interface scales
+with your system font size.
+
+== Free forever ==
+
+WarrantyBoxx is free and open source under the GPL-3.0. There are no ads, no
+in-app purchases, and no premium tier. Ever.
+
+Every warranty. Always remembered.

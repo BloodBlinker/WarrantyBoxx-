@@ -1,0 +1,81 @@
+name: warranty_vault
+description: "Every warranty. Always remembered. Offline, open-source warranty tracker."
+publish_to: 'none'
+
+# Semantic versioning (Blueprint Section 9.1). versionCode handled in build.gradle.kts.
+version: 1.0.0+10000
+
+environment:
+  sdk: ^3.12.1
+
+# Blueprint Section 10 — Approved Dependency List. No package outside this set
+# may be added without explicit justification.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management + DI (Section 4.1).
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # Database / ORM — type-safe reactive SQLite (Section 3.1).
+  drift: ^2.20.0
+  drift_flutter: ^0.2.0
+  sqlite3_flutter_libs: ^0.5.24
+
+  # Navigation with deep-link support (Section 4.1).
+  go_router: ^14.0.0
+
+  # Notifications + background scheduling (no Firebase / GMS).
+  flutter_local_notifications: ^17.2.3
+  # NOTE: Blueprint approved ^0.x; pinned to ^0.9 because 0.5.x fails to compile
+  # against the Kotlin 2.3 / AGP 9 toolchain on this Flutter (toolchain deviation).
+  workmanager: ^0.9.0+3
+
+  # Photos.
+  image_picker: ^1.1.2
+  flutter_image_compress: ^2.3.0
+
+  # Export.
+  pdf: ^3.11.1
+  csv: ^6.0.0
+  # NOTE: Blueprint approved ^9.x, bumped to ^10.x for compatibility with the
+  # newer `web`/`drift` packages required by Flutter 3.44 (toolchain deviation).
+  share_plus: ^10.1.4
+
+  # Home screen widget.
+  home_widget: ^0.6.0
+
+  # Utilities.
+  uuid: ^4.5.1
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  intl: ^0.20.2
+  shared_preferences: ^2.3.2
+  collection: ^1.18.0
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generation.
+  build_runner: ^2.4.13
+  drift_dev: ^2.20.0
+  riverpod_generator: ^2.6.1
+  riverpod_lint: ^2.6.1
+
+  # Testing.
+  mocktail: ^1.0.4
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true # enable flutter gen-l10n for ARB localisation (Section 4.1).
+
+  assets:
+    - assets/privacy_policy.md

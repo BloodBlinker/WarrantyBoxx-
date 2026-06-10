@@ -1,0 +1,6 @@
+# Blueprint Section 4.1 / 11.3: all user-facing strings in ARB files (English only at launch).
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+nullable-getter: false

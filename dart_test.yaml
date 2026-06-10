@@ -1,0 +1,5 @@
+# Test tag configuration (Blueprint Section 6.5).
+tags:
+  performance:
+    # Performance tests are opt-in: run with `flutter test --tags performance`.
+    skip: false

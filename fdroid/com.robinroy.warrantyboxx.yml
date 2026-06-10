@@ -1,0 +1,38 @@
+# F-Droid build metadata for WarrantyBoxx (Blueprint Sections 9.3, 6.4).
+# Copy to fdroiddata/metadata/com.robinroy.WarrantyBoxx.yml when submitting.
+Categories:
+  - Money
+  - Utilities
+License: GPL-3.0-or-later
+AuthorName: WarrantyBoxx contributors
+SourceCode: https://github.com/REPLACE_ME/WarrantyBoxx
+IssueTracker: https://github.com/REPLACE_ME/WarrantyBoxx/issues
+Changelog: https://github.com/REPLACE_ME/WarrantyBoxx/blob/main/fastlane/metadata/android/en-US/changelogs
+
+AutoName: WarrantyBoxx
+
+RepoType: git
+Repo: https://github.com/REPLACE_ME/WarrantyBoxx.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0.0
+    # Build with a pinned Flutter SDK for reproducibility.
+    srclibs:
+      - flutter@3.44.1
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    prebuild:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter gen-l10n
+    build:
+      - $$flutter$$/bin/flutter build apk --release --flavor fdroid
+
+AllowedAPKSigningKeys: REPLACE_WITH_RELEASE_KEYSTORE_SHA256
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 10000
