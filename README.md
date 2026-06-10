@@ -71,6 +71,16 @@ WarrantyBoxx collects nothing and makes no network calls. See
 CI by [`tool/fdroid_verify.py`](tool/fdroid_verify.py), which fails the build if
 any proprietary SDK, tracker domain, or outbound network API is detected.
 
+## Support the Project 🎓
+
+WarrantyBoxx is free and always will be. I'm a developer from Kerala, India. I built this app because I needed it and it didn't exist. Every contribution I receive goes into a savings fund — I'm working toward my Master's degree, collecting money one step at a time.
+
+If this app helped you out, even a small amount means a lot.
+
+**UPI ID:** `robinwackerman@okaxis`
+
+For international supporters — feel free to reach out via GitHub Issues and I'll sort something out.
+
 ## Licence
 
 GPL-3.0-or-later. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
