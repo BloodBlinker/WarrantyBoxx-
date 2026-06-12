@@ -10,6 +10,11 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     compileOptions {
         // Required by flutter_local_notifications (core library desugaring).
         isCoreLibraryDesugaringEnabled = true
@@ -25,14 +30,6 @@ android {
         // Version code formula: MAJOR*10000 + MINOR*100 + PATCH => 1.0.0 == 10000.
         versionCode = 10000
         versionName = "1.0.0"
-    }
-
-    // Blueprint Section 9.1: single "fdroid" flavour for v1.
-    flavorDimensions += "distribution"
-    productFlavors {
-        create("fdroid") {
-            dimension = "distribution"
-        }
     }
 
     buildTypes {

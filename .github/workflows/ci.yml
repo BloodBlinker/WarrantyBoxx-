@@ -47,21 +47,21 @@ jobs:
         run: flutter test --tags performance
 
       - name: Build release APK
-        run: flutter build apk --release --flavor fdroid
+        run: flutter build apk --release
 
       # Custom F-Droid compliance check: no GMS, no network calls, no trackers.
       - name: F-Droid verification
-        run: python3 tool/fdroid_verify.py build/app/outputs/flutter-apk/app-fdroid-release.apk
+        run: python3 tool/fdroid_verify.py build/app/outputs/flutter-apk/app-release.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: warranty-vault-release-apk
-          path: build/app/outputs/flutter-apk/app-fdroid-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
 
       # On a tagged release, publish the APK to GitHub Releases (Section 9.2).
       - name: Publish to GitHub Releases
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: build/app/outputs/flutter-apk/app-fdroid-release.apk
+          files: build/app/outputs/flutter-apk/app-release.apk

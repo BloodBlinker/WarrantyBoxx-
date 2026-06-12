@@ -1,19 +1,18 @@
 Categories:
-  - Utility
-  - Finance
+  - your_category
 License: GPL-3.0-only
-AuthorName: Robin Roy
-AuthorWebSite: https://github.com/BloodBlinker
-SourceCode: https://github.com/BloodBlinker/WarrantyBoxx-
-IssueTracker: https://github.com/BloodBlinker/WarrantyBoxx-/issues
-AutoName: WarrantyBoxx
+AuthorName: YourName
+AuthorWebSite: https://github.com/YourName
+SourceCode: https://github.com/YourName/YourApp
+IssueTracker: https://github.com/YourName/YourApp/issues
+AutoName: YourApp
 RepoType: git
-Repo: https://github.com/BloodBlinker/WarrantyBoxx-.git
+Repo: https://github.com/YourName/YourApp.git
 
 Builds:
-  - versionName: '1.0.0'
-    versionCode: 100001
-    commit: v1.0.0
+  - versionName: '1.0'
+    versionCode: 11
+    commit: v1.0
     srclibs:
       - flutter@stable
     rm:
@@ -23,7 +22,7 @@ Builds:
       - web
       - windows
     prebuild:
-      - flutterVersion=$(sed -n -E "s/.*FLUTTER_VERSION:\ '(.*)'/\1/p" .github/workflows/ci.yml)
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
       - '[[ $flutterVersion ]]'
       - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
@@ -39,9 +38,9 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform=android-arm
 
-  - versionName: '1.0.0'
-    versionCode: 100002
-    commit: v1.0.0
+  - versionName: '1.0'
+    versionCode: 12
+    commit: v1.0
     srclibs:
       - flutter@stable
     rm:
@@ -51,7 +50,7 @@ Builds:
       - web
       - windows
     prebuild:
-      - flutterVersion=$(sed -n -E "s/.*FLUTTER_VERSION:\ '(.*)'/\1/p" .github/workflows/ci.yml)
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
       - '[[ $flutterVersion ]]'
       - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
@@ -67,9 +66,9 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform=android-arm64
 
-  - versionName: '1.0.0'
-    versionCode: 100003
-    commit: v1.0.0
+  - versionName: '1.0'
+    versionCode: 13
+    commit: v1.0
     srclibs:
       - flutter@stable
     rm:
@@ -79,7 +78,7 @@ Builds:
       - web
       - windows
     prebuild:
-      - flutterVersion=$(sed -n -E "s/.*FLUTTER_VERSION:\ '(.*)'/\1/p" .github/workflows/ci.yml)
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
       - '[[ $flutterVersion ]]'
       - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
@@ -102,5 +101,5 @@ VercodeOperation:
   - '%c * 10 + 2'
   - '%c * 10 + 3'
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: '1.0.0'
-CurrentVersionCode: 100003
+CurrentVersion: '1.0'
+CurrentVersionCode: 13
