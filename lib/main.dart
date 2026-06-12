@@ -65,7 +65,7 @@ Future<void> main() async {
   runApp(
     UncontrolledProviderScope(
       container: container,
-      child: const WarrantyVaultApp(),
+      child: const WarrantyBoxxApp(),
     ),
   );
 }
@@ -88,9 +88,9 @@ void _handleDeepLink(ProviderContainer container, String payload) {
 }
 
 /// Root application widget.
-class WarrantyVaultApp extends ConsumerWidget {
+class WarrantyBoxxApp extends ConsumerWidget {
   /// Creates the root app widget.
-  const WarrantyVaultApp({super.key});
+  const WarrantyBoxxApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

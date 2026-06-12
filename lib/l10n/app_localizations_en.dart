@@ -61,7 +61,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dashboardExpiredSection => 'Expired';
 
   @override
-  String get dashboardEmptyTitle => 'Your warranty vault is empty';
+  String get dashboardEmptyTitle => 'Your WarrantyBoxx is empty';
 
   @override
   String get dashboardEmptyBody =>

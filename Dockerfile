@@ -1,4 +1,4 @@
-# Reproducible build environment for Warranty Vault (Blueprint Section 6.4).
+# Reproducible build environment for WarrantyBoxx (Blueprint Section 6.4).
 #
 # Produces the release APK from a clean source checkout with pinned toolchain
 # versions. Usage:

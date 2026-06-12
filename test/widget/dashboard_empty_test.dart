@@ -21,7 +21,7 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.text('Your warranty vault is empty'), findsOneWidget);
+    expect(find.text('Your WarrantyBoxx is empty'), findsOneWidget);
     expect(find.text('Add item'), findsOneWidget);
   });
 }

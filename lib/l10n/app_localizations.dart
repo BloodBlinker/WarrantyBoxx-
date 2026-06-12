@@ -187,7 +187,7 @@ abstract class AppLocalizations {
   /// No description provided for @dashboardEmptyTitle.
   ///
   /// In en, this message translates to:
-  /// **'Your warranty vault is empty'**
+  /// **'Your WarrantyBoxx is empty'**
   String get dashboardEmptyTitle;
 
   /// No description provided for @dashboardEmptyBody.

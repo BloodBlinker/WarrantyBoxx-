@@ -34,13 +34,13 @@ class ExportService {
       case ExportFormat.csv:
         final csv = CsvExporter.toCsv(items,
             categoriesById: categoriesById, today: today);
-        final path = p.join(dir.path, 'warranty_vault_$stamp.csv');
+        final path = p.join(dir.path, 'warrantyboxx_$stamp.csv');
         await File(path).writeAsString(csv, encoding: utf8);
         file = XFile(path, mimeType: 'text/csv');
       case ExportFormat.pdf:
         final bytes = await PdfExporter.build(items,
             categoriesById: categoriesById, today: today);
-        final path = p.join(dir.path, 'warranty_vault_$stamp.pdf');
+        final path = p.join(dir.path, 'warrantyboxx_$stamp.pdf');
         await File(path).writeAsBytes(bytes);
         file = XFile(path, mimeType: 'application/pdf');
     }

@@ -21,7 +21,7 @@
   "dashboardAverageHealth": "Average health {percent}%",
   "@dashboardAverageHealth": { "placeholders": { "percent": { "type": "int" } } },
   "dashboardExpiredSection": "Expired",
-  "dashboardEmptyTitle": "Your warranty vault is empty",
+  "dashboardEmptyTitle": "Your WarrantyBoxx is empty",
   "dashboardEmptyBody": "Add your first item to start protecting your purchases.",
   "dashboardAddFirstItem": "Add item",
 
