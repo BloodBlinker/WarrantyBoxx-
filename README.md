@@ -76,8 +76,8 @@ without asking you to create an account or share any data.
 
 WarrantyBoxx targets F-Droid as its primary distribution channel. Until it is
 published there, you can build the APK yourself (see
-[Building](#building-from-source)) or install a release APK from the project's
-releases page.
+[Building](#building-from-source)) or install a release APK from the
+[releases page](https://github.com/BloodBlinker/WarrantyBoxx-/releases).
 
 **Supported platform:** Android 8.0 (Oreo, API 26) and above.
 
@@ -198,4 +198,4 @@ I'll sort something out.
 
 ## Licence
 
-GPL-3.0-or-later. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+GPL-3.0-only. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
