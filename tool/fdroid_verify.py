@@ -87,7 +87,14 @@ def check_apk(apk_path: Path) -> None:
     haystack = blob.decode("latin-1").lower()
     for token in FORBIDDEN_SDK:
         if token in haystack:
-            failures.append(f"Forbidden SDK '{token}' embedded in APK")
+            # Exception for standard Android Photo Picker intent constants which contain the substring
+            # but are just intent actions, not the proprietary SDK.
+            if token == "com.google.android.gms" and haystack.count(token) == haystack.count("com.google.android.gms.provider."):
+                continue
+            # Another simpler way is to just ignore it if it doesn't appear outside of the intent strings.
+            cleaned_haystack = haystack.replace("com.google.android.gms.provider.action.pick_images", "").replace("com.google.android.gms.provider.extra.pick_images_max", "")
+            if token in cleaned_haystack:
+                failures.append(f"Forbidden SDK '{token}' embedded in APK")
     for domain in FORBIDDEN_DOMAINS:
         if domain in haystack:
             failures.append(f"Forbidden domain '{domain}' embedded in APK")
