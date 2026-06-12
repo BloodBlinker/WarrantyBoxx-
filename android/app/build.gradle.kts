@@ -27,9 +27,9 @@ android {
         // Blueprint Section 9.1: Android 8.0 (Oreo) minimum.
         minSdk = 26
         targetSdk = flutter.targetSdkVersion
-        // Version code formula: MAJOR*10000 + MINOR*100 + PATCH => 1.0.0 == 10000.
-        versionCode = 10000
-        versionName = "1.0.0"
+        // Version code formula: MAJOR*10000 + MINOR*100 + PATCH => 1.0.1 == 10001.
+        versionCode = 10001
+        versionName = "1.0.1"
     }
 
     buildTypes {

@@ -1,7 +1,10 @@
 # WarrantyBoxx — R8 keep rules (Blueprint Section 9.1)
 
 # Flutter
--keep class io.flutter.** { *; }
+# NOTE: no blanket `-keep class io.flutter.**` — Flutter's tooling injects the
+# keep rules the engine needs (JNI entry points are @Keep-annotated). A blanket
+# keep retains the unused Play-Store deferred-components classes, whose
+# com.google.android.play.core references fail F-Droid's non-free scanner.
 -keep class io.flutter.plugins.** { *; }
 -dontwarn io.flutter.embedding.**
 

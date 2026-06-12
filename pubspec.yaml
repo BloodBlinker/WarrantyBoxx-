@@ -3,7 +3,7 @@ description: "Every warranty. Always remembered. Offline, open-source warranty t
 publish_to: 'none'
 
 # Semantic versioning (Blueprint Section 9.1). versionCode handled in build.gradle.kts.
-version: 1.0.0+10000
+version: 1.0.1+10001
 
 environment:
   sdk: ^3.12.1

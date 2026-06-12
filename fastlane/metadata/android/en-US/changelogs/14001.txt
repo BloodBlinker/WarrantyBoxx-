@@ -1,0 +1,5 @@
+1.0.1 — F-Droid compliance release.
+
+- Stripped unused Google Play Core references from release builds.
+- Renamed remaining "Warranty Vault" mentions to WarrantyBoxx.
+- Export files are now named warrantyboxx_<date>.csv/.pdf.
