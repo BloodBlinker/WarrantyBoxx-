@@ -60,7 +60,7 @@ jobs:
           storePassword=$KEY_PASSWORD
           keyPassword=$KEY_PASSWORD
           keyAlias=$KEY_ALIAS
-          storeFile=app/release.keystore
+          storeFile=release.keystore
           EOF
 
       - name: Build release APK
