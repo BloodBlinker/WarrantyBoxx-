@@ -49,6 +49,20 @@ jobs:
       - name: Performance tests
         run: flutter test --tags performance
 
+      - name: Configure Keystore
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 --decode > android/app/release.keystore
+          cat <<EOF > android/key.properties
+          storePassword=$KEY_PASSWORD
+          keyPassword=$KEY_PASSWORD
+          keyAlias=$KEY_ALIAS
+          storeFile=app/release.keystore
+          EOF
+
       - name: Build release APK
         run: flutter build apk --release --split-per-abi
 
